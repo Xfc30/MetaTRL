@@ -1,0 +1,49 @@
+{
+  "trajectory_embedding": {
+    "BERTLM": {
+      "dataset_class": "BERTLMDataset",
+      "executor": "BertBaseExecutor",
+      "evaluator": "ClassificationEvaluator"
+    },
+    "BERTContrastive": {
+      "dataset_class": "ContrastiveDataset",
+      "executor": "ContrastiveExecutor",
+      "evaluator": "ClassificationEvaluator"
+    },
+    "BERTContrastiveLM": {
+      "dataset_class": "ContrastiveLMDataset",
+      "executor": "ContrastiveMLMExecutor",
+      "evaluator": "ClassificationEvaluator"
+    },
+    "LinearETA": {
+      "dataset_class": "ETADataset",
+      "executor": "ETAExecutor",
+      "evaluator": "RegressionEvaluator"
+    },
+    "LinearClassify": {
+      "dataset_class": "TrajClassifyDataset",
+      "executor": "TrajClassifyExecutor",
+      "evaluator": "TwoClassificationEvaluator"
+    },
+    "MetaMulLMLearning": {
+      "dataset_class": "MulLMDataset",
+      "executor": "MulLMExecutor",
+      "evaluator": "ClassificationEvaluator"
+    },
+    "MetaTRLLinearETA": {
+      "dataset_class": "ETADataset",
+      "executor": "MetaTRLETAExecutor",
+      "evaluator": "RegressionEvaluator"
+    },
+    "MetaTRLLinearClassify": {
+      "dataset_class": "TrajClassifyDataset",
+      "executor": "MetaTRLTrajClassifyExecutor",
+      "evaluator": "TwoClassificationEvaluator"
+    },
+    "MetaTRLLinearDesPredict": {
+      "dataset_class": "TrajDesPredictDataset",
+      "executor": "MetaTRLTrajDesPredictExecutor",
+      "evaluator": "MultiClassificationEvaluator"
+    }
+  }
+}

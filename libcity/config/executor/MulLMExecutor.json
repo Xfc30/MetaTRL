@@ -1,0 +1,33 @@
+{
+  "batch_size": 32,
+  "grad_accmu_steps": 1,
+  "max_epoch": 20,
+
+  "meta_epochs":5,
+  "city_epochs":1,
+  "test_epochs":50,
+
+  "learner": "adamw",
+  "learning_rate": 2e-4,
+
+  "meta_lr": 5e-4,
+  "update_lr": 1e-3,
+
+  "lr_eta_min": 0,
+  "lr_warmup_epoch": 4,
+  "lr_warmup_init": 1e-6,
+  "lr_decay": true,
+  "lr_scheduler": "cosinelr",
+  "lr_decay_ratio": 0.1,
+  "t_in_epochs": true,
+  "clip_grad_norm": true,
+  "max_grad_norm": 5,
+  "use_early_stop": true,
+  "patience": 50,
+  "test_every": 10,
+  "log_batch": 500,
+  "log_every": 1,
+  "l2_reg": null,
+  "cla_loss_weight": 1,
+  "reg_loss_weight": 0.1
+}
