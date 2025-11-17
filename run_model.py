@@ -1,0 +1,26 @@
+import argparse
+
+from libcity.pipeline import run_model
+from libcity.utils import add_other_args
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--task', type=str, default='trajectory_embedding', help='the name of task')
+    parser.add_argument('--model', type=str, default='BERTLM', help='the name of model')
+    parser.add_argument('--dataset', type=str, default='porto', help='the name of dataset')
+
+    parser.add_argument('--config_file', type=str, default=None, help='the file name of config file')
+    parser.add_argument('--exp_id', type=str, default=None, help='id of experiment')
+    add_other_args(parser)
+    args = parser.parse_args()  # parse_args() 方法 在默认情况下 允许将长选项缩写为前缀，如果缩写无歧义（即前缀与一个特定选项相匹配）的话
+    dict_args = vars(args)
+    other_args = {key: val for key, val in dict_args.items() if key not in [
+        'task', 'model', 'dataset', 'config_file', 'saved_model', 'train'] and
+                  val is not None}
+    run_model(task=args.task, model_name=args.model, dataset_name=args.dataset,
+              config_file=args.config_file, saved_model=args.saved_model,
+              train=args.train, other_args=other_args)
+
+ # ./libcity/cache/COLAMetaLearning/115894/model_cache/115894_COLAMetaLearning_porto.pt
+ # ./libcity/cache/COLAMetaLearning/967624/model_cache/967624_COLAMetaLearning_porto.pt
+ # nohup python run_model.py --model  COLALinearETA --dataset porto --config porto_cola --gpu_id 7 --pretrain_path ./libcity/cache/COLAMetaLearning/236470/model_cache/236470_COLAMetaLearning_porto.pt

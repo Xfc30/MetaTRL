@@ -1,0 +1,82 @@
+{
+  "n_layers": 6,
+  "d_model": 128,
+  "attn_heads": 8,
+  "max_epoch": 30,
+  "batch_size": 64,
+  "grad_accmu_steps": 1,
+  "learning_rate": 2e-4,
+  "dataset": "bj",
+  "roadnetwork": "bj_roadmap_edge_bj_True_1_merge",
+  "geo_file": "bj_roadmap_edge_bj_True_1_merge_withdegree",
+  "rel_file": "bj_roadmap_edge_bj_True_1_merge_withdegree",
+  "struct_features_file": "bj_roadmap_edge_bj_True_1_merge_structure_features.geo",
+  "merge": true,
+  "min_freq": 1,
+  "seq_len": 128,
+  "test_every": 50,
+  "temperature": 0.05,
+  "contra_loss_type": "simclr",
+  "classify_label": "vflag",
+  "type_ln": "post",
+  "add_cls": false,
+  "add_time_in_day": true,
+  "add_day_in_week": true,
+  "add_pe": true,
+  "add_temporal_bias": false,
+  "temporal_bias_dim": 64,
+  "use_mins_interval": false,
+  "add_gat": false,
+  "add_meta_gat": true,
+  "gat_heads_per_layer": [
+    8,
+    16,
+    1
+  ],
+  "gat_features_per_layer": [
+    16,
+    16,
+    128
+  ],
+  "gat_dropout": 0.1,
+  "gat_K": 1,
+  "gat_avg_last": true,
+  "load_trans_prob": true,
+  "append_degree2gcn": true,
+  "normal_feature": false,
+  "train_cities": [
+    "porto"
+  ],
+  "add_time_interval": false,
+  "train_cities_max_time_scale_s": [
+    3000
+  ],
+  "train_cities_time_interval_list": [
+    [
+      15,
+      60,
+      150
+    ]
+  ],
+  "max_time_scale_s": 1500,
+  "time_interval_scales": [
+    10,
+    30,
+    60
+  ],
+  "domain_specific_params": [
+    "value_mlp",
+    "value_transform",
+    "wte",
+    "position_embedding"
+  ],
+  "domain_shared_params" : [
+    "meta_features_mlp"
+  ],
+  "meta_train_epoch": 5,
+  "target_train_epoch": 50,
+  "cla_loss_weight": 1,
+  "reg_loss_weight": 0.005,
+  "meta_lr": 5e-4,
+  "max_train_size": 50000
+}
