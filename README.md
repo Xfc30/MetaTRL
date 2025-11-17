@@ -1,5 +1,7 @@
 # Self-supervised Cross-city Trajectory Representation Learning based on Meta-Learning （AAAI-2026 Accepted）
 The Implementation of Self-supervised Cross-city Trajectory Representation Learning based on Meta-Learning (MetaTRL)
+<img width="1478" height="753" alt="image" src="https://github.com/user-attachments/assets/966a836b-da95-4b6a-8677-7033a3350f86" />
+
 ## Implementation
 The code is based on LibCity. For datail, you can learn more about in [LibCity](https://github.com/LibCity/Bigscity-LibCity).
 The model's code is in libcity/model/*. All json files are Configuration Files.
