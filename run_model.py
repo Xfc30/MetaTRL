@@ -20,7 +20,3 @@ if __name__ == '__main__':
     run_model(task=args.task, model_name=args.model, dataset_name=args.dataset,
               config_file=args.config_file, saved_model=args.saved_model,
               train=args.train, other_args=other_args)
-
- # ./libcity/cache/COLAMetaLearning/115894/model_cache/115894_COLAMetaLearning_porto.pt
- # ./libcity/cache/COLAMetaLearning/967624/model_cache/967624_COLAMetaLearning_porto.pt
- # nohup python run_model.py --model  COLALinearETA --dataset porto --config porto_cola --gpu_id 7 --pretrain_path ./libcity/cache/COLAMetaLearning/236470/model_cache/236470_COLAMetaLearning_porto.pt
